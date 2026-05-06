@@ -19,7 +19,7 @@ const team: TeamMember[] = [
   {
     name: 'David Schripsema',
     title: 'Director of Operations',
-    email: 'info@sweetashome.co',
+    email: 'david@sweetashome.co',
   },
 ]
 
