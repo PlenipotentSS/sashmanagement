@@ -1,0 +1,5 @@
+# Sweet As Home — all crawlers welcome
+User-agent: *
+Allow: /
+
+Sitemap: https://www.sweetashome.co/sitemap.xml
