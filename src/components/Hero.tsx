@@ -10,7 +10,9 @@ export default function Hero() {
         <p className="hero__subtitle">
           Sweet As Home is a family business grounded in the stewardship, timber, and land
           traditions of the Pacific Northwest — bringing that same long-view ethos to business
-          creation, investment, and growth.
+          creation, investment, and growth. We also serve as the payment facilitation and
+          acceptance entity for the businesses we manage and our affiliated entities, taking
+          responsibility for handling those funds on their behalf.
         </p>
         <a href="#history" className="hero__cta">
           Our Story
