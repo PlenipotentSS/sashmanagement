@@ -564,6 +564,159 @@ img {
   line-height: 1.8;
 }
 
+/* ── Payment Facilitation ───────────────── */
+.payments {
+  background: var(--dark-gray-deep);
+  color: var(--cream);
+}
+
+.payments .section-label {
+  color: var(--gold-muted);
+}
+
+.payments__intro {
+  max-width: 680px;
+  margin-bottom: 4rem;
+}
+
+.payments__intro p {
+  color: rgba(245,240,230,0.65);
+  font-size: 0.95rem;
+}
+
+.payments__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.payments__card {
+  background: var(--dark-gray-bg);
+  padding: 2.5rem;
+  border-top: 3px solid var(--gold);
+}
+
+.payments__card h3 {
+  font-size: 1.4rem;
+  color: var(--cream);
+  margin-bottom: 1rem;
+}
+
+.payments__card p {
+  font-size: 0.9rem;
+  color: rgba(245,240,230,0.6);
+  line-height: 1.8;
+}
+
+.payments__notice {
+  border: 1px solid rgba(201,162,39,0.25);
+  background: rgba(201,162,39,0.04);
+  padding: 2rem 2.5rem;
+}
+
+.payments__notice p {
+  font-size: 0.85rem;
+  color: rgba(245,240,230,0.7);
+  line-height: 1.8;
+}
+
+.payments__notice p + p {
+  margin-top: 1rem;
+}
+
+.payments__notice strong {
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+.payments__legal-links {
+  font-size: 0.8rem;
+}
+
+/* ── Legal pages (Privacy / Terms) ──────── */
+.legal {
+  background: var(--cream-light);
+  padding-top: var(--nav-height);
+}
+
+.legal__container {
+  max-width: 820px;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+}
+
+.legal__header {
+  margin-bottom: 3rem;
+}
+
+.legal__title {
+  font-size: clamp(2.2rem, 5vw, 3.25rem);
+  color: var(--dark-gray-deep);
+  margin-bottom: 1rem;
+}
+
+.legal__effective {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--medium-gray);
+}
+
+.legal__body h2 {
+  font-size: 1.6rem;
+  color: var(--dark-gray-deep);
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
+}
+
+.legal__body p {
+  color: var(--dark-gray);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.legal__body ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.legal__body li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--dark-gray);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+}
+
+.legal__body li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+.legal__body strong {
+  color: var(--dark-gray-deep);
+  font-weight: 600;
+}
+
+.legal__disclaimer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--light-gray);
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--medium-gray);
+}
+
 /* ── Portfolio ──────────────────────────── */
 .portfolio {
   background: var(--cream-light);
@@ -634,8 +787,8 @@ img {
 
 .footer__top {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 3rem;
   padding-bottom: 3rem;
   border-bottom: 1px solid rgba(245,240,230,0.1);
   margin-bottom: 2rem;

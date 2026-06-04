@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const links = [
-  { label: 'History', href: '#history' },
-  { label: 'About', href: '#about' },
-  { label: 'Philosophy', href: '#philosophy' },
-  { label: 'Ventures', href: '#ventures' },
+  { label: 'History', href: '/#history' },
+  { label: 'About', href: '/#about' },
+  { label: 'Philosophy', href: '/#philosophy' },
+  { label: 'Payments', href: '/#payments' },
+  { label: 'Ventures', href: '/#ventures' },
 ]
 
 export default function Navbar() {
@@ -20,7 +22,7 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : 'top'}`}>
       <div className="navbar__inner">
-        <a href="#" className="navbar__logo">
+        <Link to="/" className="navbar__logo">
           <img src="/logo_notext.png" alt="Sweet As Home Icon" />
           <span className="navbar__logo-text logo-text-scrolled">
             <img src="/text_only.png" alt="Sweet As Home" />
@@ -28,7 +30,7 @@ export default function Navbar() {
           <span className="navbar__logo-text logo-text-top">
             <img src="/text_only_top.png" alt="Sweet As Home" />
           </span>
-        </a>
+        </Link>
 
         <ul className={`navbar__links ${menuOpen ? 'open' : ''}`}>
           {links.map(({ label, href }) => (
