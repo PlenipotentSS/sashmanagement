@@ -109,7 +109,8 @@ export default function PrivacyPage() {
       <p>
         Questions about this Privacy Policy or our data practices? Email{' '}
         <a href="mailto:privacy@sweetashome.co">privacy@sweetashome.co</a> or{' '}
-        <a href="mailto:contact@sweetashome.co">contact@sweetashome.co</a>.
+        <a href="mailto:contact@sweetashome.co">contact@sweetashome.co</a>, or call{' '}
+        <a href="tel:+12066591257">+1 206-659-1257</a>.
       </p>
 
       <p className="legal__disclaimer">

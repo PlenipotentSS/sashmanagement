@@ -41,6 +41,7 @@ export default function Footer() {
             <ul>
               <li><a href="mailto:contact@sweetashome.co">contact@sweetashome.co</a></li>
               <li><a href="mailto:payments@sweetashome.co">payments@sweetashome.co</a></li>
+              <li><a href="tel:+12066591257">+1 206-659-1257</a></li>
             </ul>
           </div>
         </div>
