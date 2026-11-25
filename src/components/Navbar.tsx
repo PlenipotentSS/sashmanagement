@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import LoginModal from './LoginModal'
 
 const links = [
   { label: 'History', href: '/#history' },
@@ -12,6 +13,8 @@ const links = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [loginOpen, setLoginOpen] = useState(false)
+  const closeLogin = useCallback(() => setLoginOpen(false), [])
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -40,16 +43,27 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <button
-          className="navbar__hamburger"
-          aria-label="Toggle menu"
-          onClick={() => setMenuOpen(o => !o)}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
+        <div className="navbar__actions">
+          <button
+            className="navbar__login"
+            onClick={() => { setMenuOpen(false); setLoginOpen(true) }}
+          >
+            Login
+          </button>
+
+          <button
+            className="navbar__hamburger"
+            aria-label="Toggle menu"
+            onClick={() => setMenuOpen(o => !o)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
       </div>
+
+      <LoginModal open={loginOpen} onClose={closeLogin} />
     </nav>
   )
 }

@@ -241,6 +241,172 @@ img {
   }
 }
 
+/* ── Navbar actions / Login ─────────────── */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.navbar__login {
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--cream);
+  background: transparent;
+  border: 1px solid var(--gold);
+  padding: 0.55rem 1.25rem;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.navbar.scrolled .navbar__login {
+  color: var(--dark-gray-deep);
+}
+
+.navbar__login:hover,
+.navbar.scrolled .navbar__login:hover {
+  background: var(--gold);
+  color: var(--dark-gray-deep);
+}
+
+/* ── Login lightbox ─────────────────────── */
+.login-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(20, 19, 17, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: login-fade 0.2s ease;
+}
+
+.login-lightbox__dialog {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  background: var(--dark-gray-deep);
+  border: 1px solid rgba(201, 162, 39, 0.3);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  padding: 2.75rem 2.25rem 2.25rem;
+  color: var(--cream);
+  outline: none;
+  animation: login-rise 0.25s ease;
+}
+
+.login-lightbox__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--medium-gray);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.login-lightbox__close:hover {
+  color: var(--gold);
+}
+
+.login-lightbox__title {
+  font-size: 2.25rem;
+  color: var(--cream);
+  margin-bottom: 1rem;
+}
+
+.login-lightbox__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.login-lightbox__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(245, 240, 230, 0.12);
+  background: rgba(245, 240, 230, 0.03);
+  color: var(--cream);
+  transition: border-color var(--transition), background var(--transition);
+}
+
+a.login-lightbox__option:hover {
+  border-color: var(--gold);
+  background: rgba(201, 162, 39, 0.08);
+  color: var(--cream);
+}
+
+.login-lightbox__name {
+  display: block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.login-lightbox__desc {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--medium-gray);
+}
+
+.login-lightbox__arrow {
+  color: var(--gold);
+  font-size: 1.2rem;
+  transition: transform var(--transition);
+}
+
+a.login-lightbox__option:hover .login-lightbox__arrow {
+  transform: translateX(4px);
+}
+
+.login-lightbox__option.is-disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.login-lightbox__badge {
+  flex-shrink: 0;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-muted);
+  border: 1px solid rgba(201, 162, 39, 0.4);
+  padding: 0.3rem 0.6rem;
+}
+
+@keyframes login-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes login-rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+  .login-lightbox__dialog {
+    padding: 2.5rem 1.25rem 1.5rem;
+  }
+  .navbar__login {
+    padding: 0.45rem 0.9rem;
+  }
+}
+
 /* ── Hero ───────────────────────────────── */
 .hero {
   min-height: 100vh;
